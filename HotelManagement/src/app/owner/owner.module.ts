@@ -4,16 +4,22 @@ import { CommonModule } from '@angular/common';
 import { OwnerRoutingModule } from './owner-routing.module';
 import { OwnerLoginComponent } from './owner-login/owner-login.component';
 import { SharedModule } from '../shared/shared.module';
+import { NewUserComponent } from './new-user/new-user.component';
+import { MatIconModule } from '@angular/material/icon';
+import { MatRadioModule } from '@angular/material/radio';
 
 
 @NgModule({
   declarations: [
-    OwnerLoginComponent
+    OwnerLoginComponent,
+    NewUserComponent
   ],
   imports: [
     CommonModule,
     OwnerRoutingModule,
-    SharedModule
+    SharedModule,
+    MatIconModule,
+    MatRadioModule 
   ]
 })
 export class OwnerModule { }

@@ -6,6 +6,9 @@ import { AppComponent } from './app.component';
 import { LandingComponent } from './CommonScreen/landing/landing.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+
+
+
 @NgModule({
   declarations: [
     AppComponent,
