@@ -7,12 +7,13 @@ import { SharedModule } from '../shared/shared.module';
 import { NewUserComponent } from './new-user/new-user.component';
 import { MatIconModule } from '@angular/material/icon';
 import { MatRadioModule } from '@angular/material/radio';
-
+import { SuccessfullLoginModule } from './successfull-login/successfull-login.module';
 
 @NgModule({
   declarations: [
     OwnerLoginComponent,
-    NewUserComponent
+    NewUserComponent,
+ 
   ],
   imports: [
     CommonModule,
