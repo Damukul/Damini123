@@ -6,7 +6,8 @@ const routes: Routes = [
   {path:"", component: LandingComponent},
   {path:"Admin", loadChildren:()=>import('./admin/admin.module').then(mod=>mod.AdminModule)},
   {path:"Owner", loadChildren:()=>import('./owner/owner.module').then(mod=>mod.OwnerModule)},
-  {path:"User", loadChildren:()=>import('./user/user.module').then(mod=>mod.UserModule)}
+  {path:"User", loadChildren:()=>import('./user/user.module').then(mod=>mod.UserModule)},
+
 ]; 
 
 @NgModule({
