@@ -7,6 +7,9 @@ import { SharedModule } from '../shared/shared.module';
 import { NewUserComponent } from './new-user/new-user.component';
 import { MatIconModule } from '@angular/material/icon';
 import { MatRadioModule } from '@angular/material/radio';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { OwnerloginComponent } from './ownerlogin/ownerlogin.component';
+
 
 
 
@@ -14,14 +17,17 @@ import { MatRadioModule } from '@angular/material/radio';
 @NgModule({
   declarations: [
     OwnerLoginComponent,
-    NewUserComponent
+    NewUserComponent,
+    OwnerloginComponent
 ],
   imports: [
     CommonModule,
     OwnerRoutingModule,
     SharedModule,
     MatIconModule,
-    MatRadioModule 
+    MatRadioModule,
+    FormsModule,
+    ReactiveFormsModule
   ]
 })
 export class OwnerModule { }
