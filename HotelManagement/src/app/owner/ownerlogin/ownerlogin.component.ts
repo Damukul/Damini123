@@ -9,6 +9,7 @@ import { Router } from '@angular/router';
 })
 export class OwnerloginComponent {
   login!:FormGroup;
+hide: any;
   constructor(private fb:FormBuilder, private router:Router){
   }
   ngOnInit()

@@ -1,8 +1,31 @@
 <p>ownerlogin works!</p>
 <form [formGroup]="login">
-    <label>User Name:</label>
-    <input type="text" formControlName="username"><br>
+  
+    <mat-form-field >
+        <mat-label>First name</mat-label>
+        <input type="text" matInput formControlName="username"><br>
+        <mat-hint>Enter Your First Name!</mat-hint>
+      </mat-form-field>
+      <br>
 
-    <label>Password:</label>
-    <input type="password" formControlName="password"><br>
+      <mat-form-field >
+        <mat-label>Last name</mat-label>
+        <input type="text" matInput formControlName="lastname">
+        <mat-hint *ngIf="!login.get('lastname')?.touched">Enter Your last Name!</mat-hint>
+      </mat-form-field>
+      <br>
+
+      <mat-form-field>
+        <mat-label>Enter your password</mat-label>
+        <input matInput [type]="hide ? 'password' : 'text'">
+        <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+          <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+        </button>
+        <mat-hint>Password should contain at least 8 characters!</mat-hint>
+      </mat-form-field>
+      <br>
+
+      <button mat-raised-button color="warn" disabled="!login.valid">Submit</button>
+
+
 </form>
